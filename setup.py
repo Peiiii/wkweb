@@ -55,7 +55,8 @@ setuptools.setup(
     install_requires=[
         'flask',
         'jinja2',
-        'fire'
+        'fire',
+        'wpkit2'
     ],
     packages=setuptools.find_packages(),
     package_dir={'web': 'web'},
@@ -64,14 +65,7 @@ setuptools.setup(
             'wwb = web.cli:main',
         ]
     },
-    package_data={'web': [
-        'data/*', 'data/*/*', 'data/*/*/*', 'data/*/*/*/*', 'data/*/*/*/*/*', 'data/*/*/*/*/*/*', 'data/*/*/*/*/*/*/*',
-        'data/*/*/*/*/*/*/*/*', 'data/*/*/*/*/*/*/*/*/*', 'data/*/*/*/*/*/*/*/*/*/*',
-        'applications/*', 'applications/*/*', 'applications/*/*/*', 'applications/*/*/*/*', 'applications/*/*/*/*/*',
-        'applications/*/*/*/*/*/*', 'applications/*/*/*/*/*/*/*',
-        'applications/*/*/*/*/*/*/*/*', 'applications/*/*/*/*/*/*/*/*/*', 'applications/*/*/*/*/*/*/*/*/*/*',
-
-    ]},
+    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
