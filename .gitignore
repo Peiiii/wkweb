@@ -1,6 +1,7 @@
 build/**/*
 wkweb.egg-info/**/*
-.idea
-tests/*
-data/*
-dist/*
+.idea/**/*
+tests/**/*
+data/**/*
+dist/**/*
+
