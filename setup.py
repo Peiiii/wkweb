@@ -56,7 +56,9 @@ setuptools.setup(
         'flask',
         'jinja2',
         'fire',
-        'wpkit2'
+        'wpkit2',
+        'sqlalchemy',
+        'pymysql',
     ],
     packages=setuptools.find_packages(),
     package_dir={'web': 'web'},

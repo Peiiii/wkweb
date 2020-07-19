@@ -24,6 +24,7 @@ class NestableBlueprint(Blueprint):
                          subdomain=subdomain, url_defaults=url_defaults, root_path=root_path,  *args, **kwargs)
         self.blueprints=[]
         self.static_map=static_map or {}
+        self.add_default_routes()
     def register(self, app, options, first_registration=False):
         # register self
         self.add_static_map_handlers()
@@ -49,6 +50,9 @@ class NestableBlueprint(Blueprint):
         self.static_map.update(url_folder_map)
     def add_static(self, static_url_path, static_folder):
         self.static_map[static_url_path]=static_folder
+    def add_default_routes(self):
+        '''This should be implemented in your plueprint, this function will be called when  the instance is initialized.'''
+        pass
     def add_static_map_handlers(self):
         if self.static_map:
             for url_prefix,folder in self.static_map.items():
